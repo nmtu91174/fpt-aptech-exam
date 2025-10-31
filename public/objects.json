@@ -9,12 +9,12 @@
         "id": 2,
         "title": "Student",
         "description": "You want to pursue information technology, want to study in a professional programming training environment, with a systematic program and guaranteed output.",
-        "image": "image/student.png"
+        "image": "image/student.webp"
     },
     {
         "id": 3,
         "title": "Working",
         "description": "You want to pursue information technology, want to study in a professional programming training environment, with a systematic program and guaranteed output.",
-        "image": "image/working.png"
+        "image": "image/group-happy.jpg"
     }
 ]

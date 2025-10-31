@@ -10,7 +10,7 @@ function HeroBanner() {
         <Row className="text-center bg-light p-5 mb-5 rounded align-items-center">
             <Col md={6}>
                 {/* Bạn có thể thay bằng link ảnh logo thật [cite: 10] */}
-                <Image src="public\images\Logo-fpt-aptech-1.png" fluid rounded />
+                <Image src="public/images/Logo-fpt-aptech-1.png" fluid rounded />
             </Col>
             <Col md={6}>
                 <h1>HỌC LẬP TRÌNH - HỌC APTECH [cite: 15, 16]</h1>
@@ -54,6 +54,8 @@ export default function Home() {
                             key={obj.id}
                             title={obj.title}
                             description={obj.description}
+                            image={obj.image}
+
                         />
                     ))}
                 </Row>
@@ -66,9 +68,11 @@ export default function Home() {
                     {/* 3. Dùng map() để áp dụng subjects.json  */}
                     {subjects.map(subj => (
                         <SubjectItem
+                            image={subj.image}
                             key={subj.id}
                             subject={subj.subject}
                             description={subj.description}
+
                         />
                     ))}
                 </Row>
