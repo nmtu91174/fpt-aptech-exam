@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "subject": "ReactJS",
+        "description": "With a program design that includes 04 semesters with many important technologies such as ReactJS, PHP, Python, .NET Core, Spring boot brings learners to the world of programming quickly, most effectively. After graduation, students are confident in front of employers with 4 project semesters with quality, practical products, students will definitely score points.",
+        "image": "https://th.bing.com/th/id/OIP.K-4RqDC6zFrpAG31ayDDOgHaHa?w=187&h=187&c=7&r=0&o=7&pid=1.7&rm=3"
+    },
+    {
+        "id": 2,
+        "subject": "PHP",
+        "description": "With a program design that includes 04 semesters with many important technologies such as ReactJS, PHP, Python, .NET Core, Spring boot brings learners to the world of programming quickly, most effectively. After graduation, students are confident in front of employers with 4 project semesters with quality, practical products, students will definitely score points.",
+        "image": "https://pngimg.com/uploads/php/php_PNG43.png"
+    },
+    {
+        "id": 3,
+        "subject": "Python",
+        "description": "With a program design that includes 04 semesters with many important technologies such as ReactJS, PHP, Python, .NET Core, Spring boot brings learners to the world of programming quickly, most effectively. After graduation, students are confident in front of employers with 4 project semesters with quality, practical products, students will definitely score points.",
+        "image": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png"
+    },
+    {
+        "id": 4,
+        "subject": ".NET Core",
+        "description": "With a program design that includes 04 semesters with many important technologies such as ReactJS, PHP, Python, .NET Core, Spring boot brings learners to the world of programming quickly, most effectively. After graduation, students are confident in front of employers with 4 project semesters with quality, practical products, students will definitely score points.",
+        "image": "https://www.pngitem.com/pimgs/m/33-335825_-net-core-logo-png-transparent-png.png"
+    },
+    {
+        "id": 5,
+        "subject": "Spring Boot",
+        "description": "With a program design that includes 04 semesters with many important technologies such as ReactJS, PHP, Python, .NET Core, Spring boot brings learners to the world of programming quickly, most effectively. After graduation, students are confident in front of employers with 4 project semesters with quality, practical products, students will definitely score points.",
+        "image": "https://commons.wikimedia.org/wiki/File:Spring_Boot.svg"
+    }
+]

@@ -1,40 +1,30 @@
-// src/components/Header.jsx
-import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Navbar, Container, Nav, Button } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import logo from '../assets/Logo-fpt-aptech.png';   // <-- đặt logo của bạn ở assets
 
-export default function Header() {
+const Header = () => {
     return (
-        <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+        <Navbar bg="white" expand="lg" className="border-bottom shadow-sm">
             <Container>
-                <Navbar.Brand as={Link} to="/">
-                    {/* Lấy logo FPT Aptech từ link ảnh, bạn có thể thay bằng ảnh thật */}
-                    <img
-                        src="https://fpt.aptech.edu.vn/images/logo-fpt-aptech.png"
-                        height="30"
-                        className="d-inline-block align-top"
-                        alt="FPT Aptech Logo"
-                    />
+                <Navbar.Brand as={NavLink} to="/">
+                    <img src={logo} alt="FPT Aptech" height="40" />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    {/* Links bên trái  */}
-                    <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/about">About Us</Nav.Link>
-                        <Nav.Link as={Link} to="/products">Products</Nav.Link>
-                        <Nav.Link as={Link} to="/booking">Booking</Nav.Link>
-                        <Nav.Link as={Link} to="/locations">Locations</Nav.Link>
+                <Navbar.Toggle aria-controls="main-nav" />
+                <Navbar.Collapse id="main-nav">
+                    <Nav className="mx-auto">
+                        <Nav.Link as={NavLink} to="/" end>Home</Nav.Link>
+                        <Nav.Link as={NavLink} to="/about">About Us</Nav.Link>
+                        <Nav.Link as={NavLink} to="/products">Products</Nav.Link>
+                        <Nav.Link as={NavLink} to="/booking">Booking</Nav.Link>
+                        <Nav.Link as={NavLink} to="/locations">Locations</Nav.Link>
                     </Nav>
-                    {/* Links bên phải [cite: 8, 9] */}
-                    <Nav>
-                        <Nav.Link as={Link} to="/signin">
-                            <Button variant="outline-light" className="me-2">Sign In</Button>
-                        </Nav.Link>
-                        <Nav.Link as={Link} to="/signup">
-                            <Button variant="success">Sign Up</Button>
-                        </Nav.Link>
-                    </Nav>
+                    <div className="d-flex gap-2">
+                        <Button variant="outline-warning">Sign In</Button>
+                        <Button variant="warning">Sign Up</Button>
+                    </div>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
     );
-}
+};
+export default Header;

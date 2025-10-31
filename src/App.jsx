@@ -1,34 +1,67 @@
-// src/App.jsx
-import { HashRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import { Container, Row } from 'react-bootstrap';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-// Import các trang giả để link hoạt động
-const About = () => <h2>Trang Giới Thiệu</h2>;
-const Products = () => <h2>Trang Sản Phẩm</h2>;
-const Booking = () => <h2>Trang Đặt Chỗ</h2>;
+import ObjectCard from './components/ObjectCard';
+import SubjectCard from './components/SubjectCard';
+import objects from './data/objects.json';
+import subjects from './data/subjects.json';
+import bannerImg from './assets/banner.png'; // <-- ảnh banner ≤30M
 
-function App() {
+function Home() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      {/* 1. HEADER */}
+    <>
       <Header />
+      {/* ---------- BANNER ---------- */}
+      <div className="bg-warning text-dark py-5">
+        <Container className="text-center">
+          <img src={bannerImg} alt="Banner" className="img-fluid rounded" />
+          <h1 className="mt-3">HỌC LẬP TRÌNH HỌC APTECH HỌC TẠI FPT</h1>
+        </Container>
+      </div>
 
-      {/* 2. BODY (dùng Routes) */}
-      <main style={{ flex: 1 }} className="py-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/booking" element={<Booking />} />
-          {/* Thêm các route khác cho Sign In/Sign Up... */}
-        </Routes>
-      </main>
+      {/* ---------- OBJECT SECTION ---------- */}
+      <section className="py-5">
+        <Container>
+          <h2 className="text-center mb-5 text-uppercase">
+            SHOULD WHO LEARN PROGRAMMING IN FPT APTECH?
+          </h2>
+          <Row>
+            {objects.map(o => (
+              <ObjectCard
+                key={o.id}
+                title={o.title}
+                description={o.description}
+                image={o.image}
+              />
+            ))}
+          </Row>
+        </Container>
+      </section>
 
-      {/* 3. FOOTER */}
+      {/* ---------- SUBJECT SECTION ---------- */}
+      <section className="py-5 bg-light">
+        <Container>
+          <h2 className="text-center mb-5 text-uppercase">
+            WHAT IS THE COURSE PROGRAM?
+          </h2>
+          <Row className="justify-content-center">
+            {subjects.map(s => (
+              <SubjectCard
+                key={s.id}
+                subject={s.subject}
+                description={s.description}
+                image={s.image}
+              />
+            ))}
+          </Row>
+        </Container>
+      </section>
+
       <Footer />
-    </div>
+    </>
   );
 }
 
-export default App;
+export default function App() {
+  return <Home />;
+}
